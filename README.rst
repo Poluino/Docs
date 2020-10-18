@@ -1,4 +1,4 @@
-Weather Station Project
+WSP Overview
 ========
 Weather Station Project sells open source IoT weather station kits. They are hackable and teach electronics and programming.
 
