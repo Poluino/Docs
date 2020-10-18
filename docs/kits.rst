@@ -1,5 +1,5 @@
 ============
-Installation
+Kits Overview
 ============
 
 Install the package with pip::
