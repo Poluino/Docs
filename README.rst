@@ -1,41 +1,34 @@
-Template
+Weather Station Project
 ========
-
-$project will solve your problem of where to start with documentation,
-by providing a basic explanation of how to do it easily.
+Weather Station Project sells open source IoT weather station kits. They are hackable and teach electronics and programming.
 
 Look how easy it is to use:
 
-    import project
-    # Get your stuff done
-    project.do_stuff()
+    1. Buy a kit or use your own hardware
+    2. Assemble hardware
+    3. Make an account on weatherstationproject.com and add a new device
+    4. Upload code with device token
 
 Features
 --------
 
 - Be awesome
-- Make things faster
-
-Installation
-------------
-
-Install $project by running:
-
-    install project
+- Learn while having fun
 
 Contribute
 ----------
 
-- Issue Tracker: github.com/$project/$project/issues
-- Source Code: github.com/$project/$project
+- Source Code: https://github.com/WeatherStationProject
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@google-groups.com
+Email us at one of the following addresses:
+    - support@weatherstationproject.com
+    - sales@weatherstationproject.com
 
 License
 -------
 
-The project is licensed under the BSD license.
+The project is licensed under the $licenseName license.
