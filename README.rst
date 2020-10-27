@@ -1,9 +1,9 @@
 WSP Overview
 ============
 
-| We are a team of High School / College Students from around the world united to solve a common problem.
-| Our goal is to make the DIY Electronics hobby as accessible as possible. Weather Station Project sells 
-| open-source IoT weather station kits. They are hackable and teach electronics and programming.
+We are a team of High School / College Students from around the world united to solve a common problem. 
+Our goal is to make the DIY Electronics hobby as accessible as possible. Weather Station Project sells open-source IoT weather station kits. 
+They are hackable and teach electronics and programming.
 
 **Look how easy it is to use!**
 
