@@ -13,9 +13,7 @@ Contents:
    :maxdepth: 2
    :glob:
 
-   *
-
-
+   ../README
 
 Indices and tables
 ==================
