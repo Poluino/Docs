@@ -9,13 +9,14 @@ Welcome to Read the Docs Template's documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
-   :glob:
-
+   :maxdepth: 2$
+   $
+   authors$
+   bareboneskitassembly$
+   kitsoverview$
    *
-
-
-
+$
+$
 Indices and tables
 ==================
 
