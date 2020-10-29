@@ -1,5 +1,8 @@
-============
+======================
 Barebones Kit Assembly
-============
+======================
 
-![Barebones Kit Unassembled](https://github.com/WeatherStationProject/Docs/blob/master/docs/images/Front-White-Edited_2.png)
+.. image:: ../images/barebones_comp_top.png
+    :width: 400
+    :alt: Barebones Kit Assembeled
+
