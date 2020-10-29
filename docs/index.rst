@@ -12,6 +12,9 @@ Contents:
    :maxdepth: 2
 
    readme
+   kitsoverview
+   bareboneskitassembly
+   authors
 
 Indices and tables
 ==================
