@@ -82,6 +82,42 @@
 <img alt="ESP32 Soldering Reference" src="_images/esp32_soldering.png" />
 <p>New To Soldering? No Problem! Our friends over at Adafruit Industries have an amazing tutorial on soldering the perfect joint.</p>
 <p>Link to their post is here: <a class="reference external" href="https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint">https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint</a></p>
+<p>After soldering the pins, you can remove the ESP32 and keep it aside.</p>
+<p><strong>Caution: The ESP32’s pins may be hot right after soldering. It is advised to keep it aside to cool for a few minutes and then proceed</strong></p>
+</div>
+<div class="section" id="step-3-soldering-the-other-components">
+<h2>Step 3 - Soldering the other components:<a class="headerlink" href="#step-3-soldering-the-other-components" title="Permalink to this headline">¶</a></h2>
+<p>Now you will need to solder the Barrel Jack and the 4 pin Female Pin Header for the Bosch Sensortec BME280 Environmental Sensor.</p>
+<p>For a better understanding, lets break it down into two parts.</p>
+<div class="section" id="part-a-soldering-the-barrel-jack">
+<h3>Part A - Soldering the Barrel Jack:<a class="headerlink" href="#part-a-soldering-the-barrel-jack" title="Permalink to this headline">¶</a></h3>
+<img alt="Barrel Jack Soldering Guide" src="_images/barrel_jack_soldering.png" />
+<p>Place the Barrel Jack on the PCB and start soldering the pins.</p>
+<p><em>Word of Advice: The pins on the barrel jack are larger than the pins on the headers. This means you need to keep your soldering iron on the for a bit longer</em></p>
+</div>
+<div class="section" id="part-b-soldering-the-pin-header-of-the-bme280-sensor">
+<h3>Part B - Soldering the Pin Header of the BME280 Sensor:<a class="headerlink" href="#part-b-soldering-the-pin-header-of-the-bme280-sensor" title="Permalink to this headline">¶</a></h3>
+<img alt="BME280 Close" src="_images/bme280_close.png" />
+<p>This is <strong>VERY</strong> important so read thoroughly.</p>
+<p>If you intend to power your setup via a microUSB Cable (Standard Phone Charger), do the following:</p>
+<ol class="arabic simple">
+<li><p>Place the short end of the pins so that they go through the sensor’s breakout board.</p></li>
+<li><p>The letters <strong>“GYBMEP”</strong> should be on <strong>top</strong> and the long pins to the <strong>bottom</strong>.</p></li>
+<li><p>The <strong>“VIN”</strong> pin should be the closest to the ESP32</p></li>
+</ol>
+<p>This will give you room to fit the microUSB Cable and the BME280 sensor.</p>
+<p>If you intend to use a Barrel Jack to USB cable, do the following:</p>
+<ol class="arabic simple">
+<li><p>Place the short end of the pins so that they go through the sensor’s breakout board.</p></li>
+<li><p>The words <strong>“BME/BMP280”</strong> should be on the <strong>top</strong> and the long pins to the <strong>bottom</strong>.</p></li>
+<li><p>Essentially, the orientation of the Breakout board should be flipped but the <strong>“VIN”</strong> pin should be the closest to the ESP32 in both cases.</p></li>
+</ol>
+</div>
+<div class="section" id="part-c-soldering-the-pin-socket">
+<h3>Part C - Soldering the Pin Socket:<a class="headerlink" href="#part-c-soldering-the-pin-socket" title="Permalink to this headline">¶</a></h3>
+<p>Solder the 4 pin Female pin socket for the Bosch Sensortec BME280 Environmental Sensor in place using the same method used to solder the ESP32.</p>
+<p>Make sure the socket is seated well and is soldered on straight.</p>
+</div>
 </div>
 </div>
 
@@ -96,6 +132,12 @@
 <li><a class="reference internal" href="#">Barebones Kit Assembly</a><ul>
 <li><a class="reference internal" href="#step-1-opening-the-package">Step 1 - Opening the Package:</a></li>
 <li><a class="reference internal" href="#step-2-soldeting-the-esp32-pin-sockets">Step 2 - Soldeting the ESP32 Pin Sockets:</a></li>
+<li><a class="reference internal" href="#step-3-soldering-the-other-components">Step 3 - Soldering the other components:</a><ul>
+<li><a class="reference internal" href="#part-a-soldering-the-barrel-jack">Part A - Soldering the Barrel Jack:</a></li>
+<li><a class="reference internal" href="#part-b-soldering-the-pin-header-of-the-bme280-sensor">Part B - Soldering the Pin Header of the BME280 Sensor:</a></li>
+<li><a class="reference internal" href="#part-c-soldering-the-pin-socket">Part C - Soldering the Pin Socket:</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

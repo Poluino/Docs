@@ -67,4 +67,54 @@ New To Soldering? No Problem! Our friends over at Adafruit Industries have an am
 
 Link to their post is here: `<https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint>`_
 
+After soldering the pins, you can remove the ESP32 and keep it aside. 
+
+**Caution: The ESP32's pins may be hot right after soldering. It is advised to keep it aside to cool for a few minutes and then proceed**
+
+Step 3 - Soldering the other components:
+----------------------------------------
+
+Now you will need to solder the Barrel Jack and the 4 pin Female Pin Header for the Bosch Sensortec BME280 Environmental Sensor.
+
+For a better understanding, lets break it down into two parts.
+
+Part A - Soldering the Barrel Jack:
+###################################
+
+.. image:: ../docs/images/barrel_jack_soldering.png
+    :alt: Barrel Jack Soldering Guide
+
+Place the Barrel Jack on the PCB and start soldering the pins. 
+
+*Word of Advice: The pins on the barrel jack are larger than the pins on the headers. This means you need to keep your soldering iron on the for a bit longer*
+
+Part B - Soldering the Pin Header of the BME280 Sensor:
+#######################################################
+
+.. image:: ../docs/images/bme280_close.png
+    :alt: BME280 Close
+
+This is **VERY** important so read thoroughly.
+
+If you intend to power your setup via a microUSB Cable (Standard Phone Charger), do the following:
+
+#. Place the short end of the pins so that they go through the sensor's breakout board.
+#. The letters **"GYBMEP"** should be on **top** and the long pins to the **bottom**.
+#. The **"VIN"** pin should be the closest to the ESP32
+
+This will give you room to fit the microUSB Cable and the BME280 sensor.
+
+If you intend to use a Barrel Jack to USB cable, do the following:
+
+#. Place the short end of the pins so that they go through the sensor's breakout board.
+#. The words **"BME/BMP280"** should be on the **top** and the long pins to the **bottom**.
+#. Essentially, the orientation of the Breakout board should be flipped but the **"VIN"** pin should be the closest to the ESP32 in both cases.
+
+Part C - Soldering the Pin Socket:
+##################################
+
+Solder the 4 pin Female pin socket for the Bosch Sensortec BME280 Environmental Sensor in place using the same method used to solder the ESP32. 
+
+Make sure the socket is seated well and is soldered on straight.
+
 
