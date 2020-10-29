@@ -15,7 +15,7 @@ It collects the data of **3** basic environmental features, namely;
 #. Temperature
 #. Air Pressure
 
-If you have purchased the Pre-Built version, go ahead and skip Steps 1 - 
+If you have purchased the Pre-Built version, go ahead and skip Steps 1 - 4
 
 Step 1 - Opening the Package:
 -----------------------------
@@ -117,4 +117,27 @@ Solder the 4 pin Female pin socket for the Bosch Sensortec BME280 Environmental 
 
 Make sure the socket is seated well and is soldered on straight.
 
+Step 4 - Final Inspection:
+--------------------------
+.. image:: ../docs/images/barebones_pcb_soldered.png
+    :alt: Barebones Kit PCB Soldered
 
+The PCB Should look like this after successful completion of the above steps.
+
+Step 5 - Final Assembly:
+------------------------
+
+This step is common to both the Unassembeled Kit and the Pre-Built Kit.
+
+* Place the ESP32 on to the PCB. With the text upright, make sure the **Antenna** of the ESP32 is facing towards your **right**. There is a text *"Antenna"* on the PCB to help you with alignment.
+
+* Place the BME280 sensor on the 4 pin connector keeping in mind that the **VIN/3V3** pin is the closest to the ESP32.
+
+The final result should look like this:
+
+.. image:: ../docs/images/Front-White-Edited_3.png
+    :alt: Assembled kit
+
+Assembly is done! Give yourself a pat on the back! Now lets move on to coding. 
+
+Visit the **"Barebones Coding"** to continue.
