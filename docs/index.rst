@@ -9,8 +9,8 @@ Welcome to Weather Station Project's documentation!
 Contents:
 
 .. toctree::
-   :caption: Table of Contents
    :maxdepth: 2
+   :caption: Table of Contents
 
    readme
 
