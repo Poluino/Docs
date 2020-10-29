@@ -12,7 +12,7 @@ Contents:
    :caption: Table of Contents
    :maxdepth: 2
 
-   ../README
+   readme
 
 Indices and tables
 ==================
