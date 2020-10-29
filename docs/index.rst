@@ -15,8 +15,7 @@ Contents:
    bareboneskitassembly$
    kitsoverview$
    *
-$
-$
+
 Indices and tables
 ==================
 
