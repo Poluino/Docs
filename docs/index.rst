@@ -9,13 +9,12 @@ Welcome to Weather Station Project's documentation!
 Contents:
 
 .. toctree::
-   :caption: Table of Contents
    :maxdepth: 2
-   :glob:
 
-   *
-
-
+   readme
+   kitsoverview
+   bareboneskitassembly
+   authors
 
 Indices and tables
 ==================
