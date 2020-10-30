@@ -164,25 +164,23 @@ Output
 
 .. code-block:: json
  
-  [
-    {
-      "id": Board ID,
-      "board_name": Board Name,
-      "latitude": Board Latitude,
-      "longitude": Board Longitude,
-      "temperature": Latest Temperature,
-      "pressure": Latest Pressure,
-      "humidity": Latest Humidity,
-      "rainfall": Latest Temperature,
-      "wind_speed": Latest Wind Speed,
-      "wind_direction": Latest Wind Direction,
-      "lux": Latest Lux,
-      "uv_index": Latest UV Index,
-      "last_time_connected": Last Time Connected,
-      "online": 1 or 0,
-      "public": 1
-    }
-  ]
+  {
+     "id": Board ID,
+     "board_name": Board Name,
+     "latitude": Board Latitude,
+     "longitude": Board Longitude,
+     "temperature": Latest Temperature,
+     "pressure": Latest Pressure,
+     "humidity": Latest Humidity,
+     "rainfall": Latest Temperature,
+     "wind_speed": Latest Wind Speed,
+     "wind_direction": Latest Wind Direction,
+     "lux": Latest Lux,
+     "uv_index": Latest UV Index,
+     "last_time_connected": Last Time Connected,
+     "online": 1 or 0,
+     "public": 1
+  }
 
 Get Public Board (Name)
 -----------------------
@@ -202,25 +200,24 @@ Output
 
 .. code-block:: json
  
-  [
-    {
-      "id": Board ID,
-      "board_name": Board Name,
-      "latitude": Board Latitude,
-      "longitude": Board Longitude,
-      "temperature": Latest Temperature,
-      "pressure": Latest Pressure,
-      "humidity": Latest Humidity,
-      "rainfall": Latest Temperature,
-      "wind_speed": Latest Wind Speed,
-      "wind_direction": Latest Wind Direction,
-      "lux": Latest Lux,
-      "uv_index": Latest UV Index,
-      "last_time_connected": Last Time Connected,
-      "online": 1 or 0,
-      "public": 1
-    }
-  ]
+
+  {
+     "id": Board ID,
+     "board_name": Board Name,
+     "latitude": Board Latitude,
+     "longitude": Board Longitude,
+     "temperature": Latest Temperature,
+     "pressure": Latest Pressure,
+     "humidity": Latest Humidity,
+     "rainfall": Latest Temperature,
+     "wind_speed": Latest Wind Speed,
+     "wind_direction": Latest Wind Direction,
+     "lux": Latest Lux,
+     "uv_index": Latest UV Index,
+     "last_time_connected": Last Time Connected,
+     "online": 1 or 0,
+     "public": 1
+  }
 
 Get Update (Latest)
 -------------------
