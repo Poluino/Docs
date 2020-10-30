@@ -29,13 +29,27 @@ Welcome to Weather Station Project's documentation!
 .. toctree::
    :maxdepth: 2
    :hidden:
-   :caption: APIs
+   :caption: API
 
    /api/betaapi
    /api/activeapi
    /api/obsoleteapi
 
-   authors
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: PCB
+
+   /pcb/barebonespcbv1
+   /pcb/fullpcbv1-2
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: About Weather Station Project
+   /others/authors
+   /others/contributing
+   /others/history
 
 Indices and tables
 ==================
