@@ -1,4 +1,3 @@
-======================
 Barebones Kit Assembly
 ======================
 
@@ -140,4 +139,4 @@ The final result should look like this:
 
 Assembly is done! Give yourself a pat on the back! Now lets move on to coding. 
 
-Visit the **"Barebones Coding"** to continue.
+Visit the `<Barebones Kit Coding>`_ to continue.
