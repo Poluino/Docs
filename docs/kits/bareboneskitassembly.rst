@@ -1,7 +1,7 @@
 Barebones Kit Assembly
 ======================
 
-.. image:: ./docs/images/barebones_comp_top.png
+.. image:: /images/barebones_comp_top.png
     :alt: Barebones Kit Assembeled
 
 **Thank You** for purchasing our kit and supporting our project.
@@ -31,7 +31,7 @@ First things first, open up the ziplock bags and sort the components. You should
 
 Sort these into manageable portions for ease of retrival.
 
-.. image:: ../docs/images/sorted_top.png
+.. image:: /images/sorted_top.png
     :alt: Barebones Kit Sorted
 
 Step 2 - Soldering the ESP32 Pin Sockets:
@@ -41,7 +41,7 @@ Insert the included **2x 19 Pin Female Pin Sockets** onto the **ESP32**. This is
 
 Use the below image as a reference:
 
-.. image:: ../docs/images/hand_held_esp32.png
+.. image:: /images/hand_held_esp32.png
     :alt: Reference ESP32 image
 
 Place the ESP32 and the Pin Sockets into the provided *Plated* Holes on the PCB. 
@@ -52,14 +52,14 @@ There is a text *"Antenna"* on the PCB to help you with alignment.
 
 Use the below image as a reference:
 
-.. image:: ../docs/images/esp32_alignment.png
+.. image:: /images/esp32_alignment.png
     :alt: Alignment Reference Image
 
 Turn the whole affair over and start soldering! 
 
 Make sure each pin gets adequate solder. No more and certainly No less.
 
-.. image:: ../docs/images/esp32_soldering.png
+.. image:: /images/esp32_soldering.png
     :alt: ESP32 Soldering Reference
 
 New To Soldering? No Problem! Our friends over at Adafruit Industries have an amazing tutorial on soldering the perfect joint.
@@ -80,7 +80,7 @@ For a better understanding, lets break it down into two parts.
 Part A - Soldering the Barrel Jack:
 ###################################
 
-.. image:: ../docs/images/barrel_jack_soldering.png
+.. image:: /images/barrel_jack_soldering.png
     :alt: Barrel Jack Soldering Guide
 
 Place the Barrel Jack on the PCB and start soldering the pins. 
@@ -90,7 +90,7 @@ Place the Barrel Jack on the PCB and start soldering the pins.
 Part B - Soldering the Pin Header of the BME280 Sensor:
 #######################################################
 
-.. image:: ../docs/images/bme280_close.png
+.. image:: /images/bme280_close.png
     :alt: BME280 Close
 
 This is **VERY** important so read thoroughly.
@@ -118,7 +118,7 @@ Make sure the socket is seated well and is soldered on straight.
 
 Step 4 - Final Inspection:
 --------------------------
-.. image:: ../docs/images/barebones_pcb_soldered.png
+.. image:: /images/barebones_pcb_soldered.png
     :alt: Barebones Kit PCB Soldered
 
 The PCB Should look like this after successful completion of the above steps.
@@ -134,7 +134,7 @@ This step is common to both the Unassembeled Kit and the Pre-Built Kit.
 
 The final result should look like this:
 
-.. image:: ../docs/images/Front-White-Edited_3.png
+.. image:: /images/Front-White-Edited_3.png
     :alt: Assembled kit
 
 Assembly is done! Give yourself a pat on the back! Now lets move on to coding. 
