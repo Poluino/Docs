@@ -1,5 +1,5 @@
-Barebones Kit Coding
-====================
+Barebones Kit Coding - ArduinoIDE
+=================================
 
 This is the code explanation and tutorial for the Barebones Kit. If you are using
 a **BME280** sensor, then you can follow along as well.
@@ -9,7 +9,7 @@ Step 1 - Installing the ArduinoIDE:
 
 Go over to the `arduino.cc <https://www.arduino.cc/en/software>`_ and download the latest stable release of the ArduinoIDE.
 
-.. image:: ../docs/images/arduino_ide_download.png
+.. image:: /images/arduino_ide_download.png
     :alt: ArduinoIDE download
 
 Here is an indepth tutorial on how to install the ArduinoIDE: `<https://www.arduino.cc/en/Guide>`_
@@ -49,13 +49,14 @@ We need to import the above mentioned libraries into our sketch.
 .. code-block:: C++
 
     #include <ArduinoJson.h> 
+    #include <Adafruit_Sensor.h>
     #include <Adafruit_BME280.h>
     #include <HTTPClient.h> 
     #include <WiFi.h>
 
 * **ArduinoJson** is used to create json document which we will sent to the website using an API.
-* **Adafruit_BME280** is a library contributed by the Adafruit Industries which helps us interface with the BME280 sensor
-* **HTTPClient** is used to make HTTP Requests such as POST.
+* **Adafruit_BME280** and **Adafruit_Sensor** are libraries contributed by the Adafruit Industries which helps us interface with the BME280 sensor
+* **HTTPClient** is used to make HTTP/HTTPS requests such as POST.
 * **WiFi** is used to connect the ESP32 to your WiFi Network.
 
 Define your variables:
