@@ -1,9 +1,9 @@
-Weather Station Project API
+WSP API
 =======
 
 The Weather Station Project Beta API provides programmatic access to read and write data.
 
-POST Board Data
+Post Board Data
 ---------------
 
 To post board data you need to make a POST call to the following url:
@@ -47,11 +47,11 @@ To get board data you need to make a GET call to the following url:
 
 Path Parameters
 
-+-------+--------+------------------+---------------------+
++----------------+------------------+---------------------+
 | Field | Type   | Value            | If Value is Unknown |
 +=======+========+==================+=====================+
 | token | String | Your Board Token | REQUIRED            |
-+-------+--------+------------------+---------------------+
++----------------+------------------+---------------------+
 
 Output
 
@@ -89,7 +89,7 @@ To get user data you need to make a GET call to the following url:
 
 Path Parameters
 
-+-------+--------+----------+----------+
++----------------+----------+----------+
 | Field | Type   | Value    | Optional |
 +=======+========+==========+==========+
 | uid   | String | Your UID | No       |
@@ -154,7 +154,7 @@ To get board data by ID you need to make a GET call to the following url:
 
 Path Parameters
 
-+-------+--------+----------+----------+
++----------------+----------+----------+
 | Field | Type   | Value    | Optional |
 +=======+========+==========+==========+
 | id    | String | Board ID | No       |
@@ -170,15 +170,14 @@ Output
       "board_name": Board Name,
       "latitude": Board Latitude,
       "longitude": Board Longitude,
-      "temperature": Board Temperature,
-      "pressure": Board Pressure,
-      "humidity": Board Humidity,
-      "rainfall": Board Rainfall,
-      "soil_moisture": Board Soil Moisture,
-      "wind_speed": Board Wind Speed,
-      "wind_direction": Board Wind Direction,
-      "lux": Board Lux,
-      "uv_index": Board UV Index,
+      "temperature": Latest Temperature,
+      "pressure": Latest Pressure,
+      "humidity": Latest Humidity,
+      "rainfall": Latest Temperature,
+      "wind_speed": Latest Wind Speed,
+      "wind_direction": Latest Wind Direction,
+      "lux": Latest Lux,
+      "uv_index": Latest UV Index,
       "last_time_connected": Last Time Connected,
       "online": 1 or 0,
       "public": 1
@@ -193,7 +192,7 @@ To get board data by name you need to make a GET call to the following url:
 
 Path Parameters
 
-+-------+--------+------------+----------+-----------------------------+
++----------------+------------+----------+-----------------------------+
 | Field | Type   | Value      | Optional | If Value is Unknown         |
 +=======+========+============+==========+=============================+
 | name  | String | Board Name | No       | First Letters of Board Name |
@@ -222,3 +221,67 @@ Output
       "public": 1
     }
   ]
+
+Get Update (Latest)
+-------------------
+
+To get the latest updates from us, make a GET request to this link:
+``https://beta.api.weatherstationproject.com/updates/latest``
+
+Output
+
+.. code-block:: json
+ 
+  {
+    "id": Update ID,
+    "author": Update Author,
+    "text": Update Text,
+    "time": Update Time
+  }
+
+Get Update (ID)
+-------------------
+
+To get the latest updates from us, make a GET request to this link:
+``https://beta.api.weatherstationproject.com/updates/id/:updateID``
+
+Path Parameters
+
++-----------+--------+----------+----------+
+| Field     | Type   | Value    | Optional |
++===========+========+==========+==========+
+| updateID  | String | updateID | No       |
++-----------+--------+----------+----------+
+
+Output
+
+.. code-block:: json
+ 
+  {
+    "id": Update ID,
+    "author": Update Author,
+    "text": Update Text,
+    "time": Update Time
+  }
+
+Get Machine Learning Data
+-------------------------
+
+Coming Soon!
+
+Errors
+------
+
+The WSP Beta API uses the following error codes:
+
++------------------+----------------------------------------------------------+
+| Error Code       | Meaning                                                  |
++==================+==========================================================+
+| MISSING_TOKEN    | A token needed to process the request was not specified. |
++------------------+----------------------------------------------------------+
+| NO_BOARD         | The board that was being searched for was not found.     |
++------------------+----------------------------------------------------------+
+| ERR_MISSING_JSON | There was a missing parameter in the request body.       |
++------------------+----------------------------------------------------------+
+| SQL_ERROR        | There was error within the server.                       |
++------------------+----------------------------------------------------------+
