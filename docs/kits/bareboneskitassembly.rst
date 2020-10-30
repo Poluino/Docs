@@ -96,7 +96,7 @@ Part B - Soldering the Pin Header of the BME280 Sensor:
 
 This is **VERY** important so read thoroughly.
 
-If you intend to power your setup via a microUSB Cable (Standard Phone Charger), do the following:
+If you intend to power your setup via a microUSB Cable, do the following:
 
 #. Place the short end of the pins so that they go through the sensor's breakout board.
 #. The letters **"GYBMEP"** should be on **top** and the long pins to the **bottom**.
