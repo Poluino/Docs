@@ -139,4 +139,4 @@ The final result should look like this:
 
 Assembly is done! Give yourself a pat on the back! Now lets move on to coding. 
 
-Visit the `</bareboneskitcoding>`_ to continue.
+Click **Next** to continue.
