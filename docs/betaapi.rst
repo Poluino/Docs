@@ -47,11 +47,11 @@ To get board data you need to make a GET call to the following url:
 
 Path Parameters
 
-+----------------+------------------+---------------------+
++-------+--------+------------------+---------------------+
 | Field | Type   | Value            | If Value is Unknown |
 +=======+========+==================+=====================+
 | token | String | Your Board Token | REQUIRED            |
-+----------------+------------------+---------------------+
++-------+--------+------------------+---------------------+
 
 Output
 
@@ -88,7 +88,7 @@ To get user data you need to make a GET call to the following url:
 
 Path Parameters
 
-+----------------+----------+----------+
++-------+--------+----------+----------+
 | Field | Type   | Value    | Optional |
 +=======+========+==========+==========+
 | uid   | String | Your UID | No       |
@@ -123,27 +123,25 @@ To get user data you need to make a GET call to the following url:
 Output
 
 .. code-block:: json
- 
-  [
-    {
-      "id": Board ID,
-      "board_name": Board Name,
-      "latitude": Board Latitude,
-      "longitude": Board Longitude,
-      "temperature": Latest Temperature,
-      "pressure": Latest Pressure,
-      "humidity": Latest Humidity,
-      "rainfall": Latest Temperature,
-      "wind_speed": Latest Wind Speed,
-      "wind_direction": Latest Wind Direction,
-      "lux": Latest Lux,
-      "uv_index": Latest UV Index,
-      "last_time_connected": Last Time Connected,
-      "online": 1 or 0,
-      "public": 1
-    },
-    ...
-  ]
+
+  {
+    "id": Board ID,
+    "board_name": Board Name,
+    "latitude": Board Latitude,
+    "longitude": Board Longitude,
+    "temperature": Latest Temperature,
+    "pressure": Latest Pressure,
+    "humidity": Latest Humidity,
+    "rainfall": Latest Temperature,
+    "wind_speed": Latest Wind Speed,
+    "wind_direction": Latest Wind Direction,
+    "lux": Latest Lux,
+    "uv_index": Latest UV Index,
+    "last_time_connected": Last Time Connected,
+    "online": 1 or 0,
+    "public": 1
+  }
+
 
 Get Public Board (ID)
 ---------------------
@@ -153,7 +151,7 @@ To get board data by ID you need to make a GET call to the following url:
 
 Path Parameters
 
-+----------------+----------+----------+
++-------+--------+----------+----------+
 | Field | Type   | Value    | Optional |
 +=======+========+==========+==========+
 | id    | String | Board ID | No       |
@@ -189,7 +187,7 @@ To get board data by name you need to make a GET call to the following url:
 
 Path Parameters
 
-+----------------+------------+----------+-----------------------------+
++-------+--------+------------+----------+-----------------------------+
 | Field | Type   | Value      | Optional | If Value is Unknown         |
 +=======+========+============+==========+=============================+
 | name  | String | Board Name | No       | First Letters of Board Name |
@@ -199,7 +197,6 @@ Output
 
 .. code-block:: json
  
-
   {
     "id": Board ID,
     "board_name": Board Name,
@@ -252,7 +249,7 @@ Path Parameters
 Output
 
 .. code-block:: json
- 
+
   {
     "id": Update ID,
     "author": Update Author,
