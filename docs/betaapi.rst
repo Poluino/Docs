@@ -59,25 +59,25 @@ Output
  
 
   {
-     "id": Your Board ID,
-     "board_name": Your Board Name,
-     "token": Your Board Token,
-     "latitude": Your Board Latitude,
-     "longitude": Your Board Longitude,
-     "temperature": Your Latest Temperature,
-     "pressure": Your Latest Pressure,
-     "humidity": Your Latest Humidity,
-     "rainfall": Your Latest Temperature,
-     "wind_speed": Your Latest Wind Speed,
-     "wind_direction": Your Latest Wind Direction,
-     "lux": Your Latest Lux,
-     "uv_index": Your Latest UV Index,
-     "user_id": Your User ID,
-     "last_time_connected": Time of Your Last Post,
-     "online": 1 or 0,
-     "public": 1 or 0,
-     "verified": Number,
-     "allow_collection": 1 or 0
+    "id": Your Board ID,
+    "board_name": Your Board Name,
+    "token": Your Board Token,
+    "latitude": Your Board Latitude,
+    "longitude": Your Board Longitude,
+    "temperature": Your Latest Temperature,
+    "pressure": Your Latest Pressure,
+    "humidity": Your Latest Humidity,
+    "rainfall": Your Latest Temperature,
+    "wind_speed": Your Latest Wind Speed,
+    "wind_direction": Your Latest Wind Direction,
+    "lux": Your Latest Lux,
+    "uv_index": Your Latest UV Index,
+    "user_id": Your User ID,
+    "last_time_connected": Time of Your Last Post,
+    "online": 1 or 0,
+    "public": 1 or 0,
+    "verified": Number,
+    "allow_collection": 1 or 0
   }
 
 Get User Data
@@ -164,23 +164,23 @@ Output
 .. code-block:: json
  
   {
-     "id": Board ID,
-     "board_name": Board Name,
-     "latitude": Board Latitude,
-     "longitude": Board Longitude,
-     "temperature": Latest Temperature,
-     "pressure": Latest Pressure,
-     "humidity": Latest Humidity,
-     "rainfall": Latest Temperature,
-     "wind_speed": Latest Wind Speed,
-     "wind_direction": Latest Wind Direction,
-     "lux": Latest Lux,
-     "uv_index": Latest UV Index,
-     "last_time_connected": Last Time Connected,
-     "online": 1 or 0,
-     "public": 1
+    "id": Board ID,
+    "board_name": Board Name,
+    "latitude": Board Latitude,
+    "longitude": Board Longitude,
+    "temperature": Latest Temperature,
+    "pressure": Latest Pressure,
+    "humidity": Latest Humidity,
+    "rainfall": Latest Temperature,
+    "wind_speed": Latest Wind Speed,
+    "wind_direction": Latest Wind Direction,
+    "lux": Latest Lux,
+    "uv_index": Latest UV Index,
+    "last_time_connected": Last Time Connected,
+    "online": 1 or 0,
+    "public": 1
   }
-
+  
 Get Public Board (Name)
 -----------------------
 
@@ -201,23 +201,23 @@ Output
  
 
   {
-     "id": Board ID,
-     "board_name": Board Name,
-     "latitude": Board Latitude,
-     "longitude": Board Longitude,
-     "temperature": Latest Temperature,
-     "pressure": Latest Pressure,
-     "humidity": Latest Humidity,
-     "rainfall": Latest Temperature,
-     "wind_speed": Latest Wind Speed,
-     "wind_direction": Latest Wind Direction,
-     "lux": Latest Lux,
-     "uv_index": Latest UV Index,
-     "last_time_connected": Last Time Connected,
-     "online": 1 or 0,
-     "public": 1
+    "id": Board ID,
+    "board_name": Board Name,
+    "latitude": Board Latitude,
+    "longitude": Board Longitude,
+    "temperature": Latest Temperature,
+    "pressure": Latest Pressure,
+    "humidity": Latest Humidity,
+    "rainfall": Latest Temperature,
+    "wind_speed": Latest Wind Speed,
+    "wind_direction": Latest Wind Direction,
+    "lux": Latest Lux,
+    "uv_index": Latest UV Index,
+    "last_time_connected": Last Time Connected,
+    "online": 1 or 0,
+    "public": 1
   }
-
+  
 Get Update (Latest)
 -------------------
 
