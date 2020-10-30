@@ -1,7 +1,7 @@
 Barebones Kit Assembly
 ======================
 
-.. image:: ../docs/images/barebones_comp_top.png
+.. image:: ./docs/images/barebones_comp_top.png
     :alt: Barebones Kit Assembeled
 
 **Thank You** for purchasing our kit and supporting our project.
@@ -139,4 +139,4 @@ The final result should look like this:
 
 Assembly is done! Give yourself a pat on the back! Now lets move on to coding. 
 
-Visit the `<Barebones Kit Coding>`_ to continue.
+Visit the `</bareboneskitcoding>`_ to continue.

@@ -4,9 +4,9 @@
    contain the root `toctree` directive.
 
 Welcome to Weather Station Project's documentation!
-==================================================
+===================================================
 
-Contents:
+
 
 .. toctree::
    :maxdepth: 2
