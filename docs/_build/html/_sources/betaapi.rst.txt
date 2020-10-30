@@ -1,5 +1,5 @@
-WSP API
-=======
+Weather Station Project API
+===========================
 
 The Weather Station Project Beta API provides programmatic access to read and write data.
 

@@ -34,7 +34,7 @@ Sort these into manageable portions for ease of retrival.
 .. image:: ../docs/images/sorted_top.png
     :alt: Barebones Kit Sorted
 
-Step 2 - Soldeting the ESP32 Pin Sockets:
+Step 2 - Soldering the ESP32 Pin Sockets:
 -----------------------------------------
 
 Insert the included **2x 19 Pin Female Pin Sockets** onto the **ESP32**. This is helpful while soldering as it keeps them **straight and aligned**.
