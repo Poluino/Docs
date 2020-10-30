@@ -14,7 +14,8 @@ It collects the data of **3** basic environmental features, namely;
 #. Temperature
 #. Air Pressure
 
-If you have purchased the Pre-Built version, go ahead and skip Steps 1 - 4
+.. tip::
+    If you have purchased the Prebuilt version please skip Steps 1 - 4
 
 Step 1 - Opening the Package:
 -----------------------------
@@ -62,9 +63,9 @@ Make sure each pin gets adequate solder. No more and certainly No less.
 .. image:: /images/esp32_soldering.png
     :alt: ESP32 Soldering Reference
 
-New To Soldering? No Problem! Our friends over at Adafruit Industries have an amazing tutorial on soldering the perfect joint.
-
-Link to their post is here: `<https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint>`_
+.. Important::
+    Dont know how to solder?
+    Then look at this post from Adafruit: `<https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint>`_
 
 After soldering the pins, you can remove the ESP32 and keep it aside. 
 
@@ -95,7 +96,7 @@ Part B - Soldering the Pin Header of the BME280 Sensor:
 
 This is **VERY** important so read thoroughly.
 
-If you intend to power your setup via a microUSB Cable (Standard Phone Charger), do the following:
+If you intend to power your setup via a microUSB Cable, do the following:
 
 #. Place the short end of the pins so that they go through the sensor's breakout board.
 #. The letters **"GYBMEP"** should be on **top** and the long pins to the **bottom**.

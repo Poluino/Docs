@@ -10,6 +10,8 @@ They are hackable and teach electronics and programming.
 1. Buy a kit or use your own hardware,
 2. Connect the necessary sensors to your choice of MicroController,
 3. Visit `weatherstationproject.com <http://weatherstationproject.com>`_ and create an account,
+    .. note::
+        We are in the process of changing to a standalone panel in `panel.weatherstationproject.com <http://panel.weatherstationproject.com>`_
 4. Create a ``New Device`` and copy the Token. Do **NOT** share your Token,
 5. Visit our `GitHub Repository <https://github.com/WeatherStationProject/Firmware/>`_ or write your own code to collect sensor data
 6. Read our API Documentation about how to use our latest release.
