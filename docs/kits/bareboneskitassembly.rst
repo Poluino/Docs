@@ -62,9 +62,9 @@ Make sure each pin gets adequate solder. No more and certainly No less.
 .. image:: /images/esp32_soldering.png
     :alt: ESP32 Soldering Reference
 
-New To Soldering? No Problem! Our friends over at Adafruit Industries have an amazing tutorial on soldering the perfect joint.
-
-Link to their post is here: `<https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint>`_
+.. Important::
+    Dont know how to solder?
+    Then look at this post from Adafruit: `<https://learn.adafruit.com/adafruit-guide-excellent-soldering/making-a-good-solder-joint>`_
 
 After soldering the pins, you can remove the ESP32 and keep it aside. 
 
