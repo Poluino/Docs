@@ -8,5 +8,5 @@ Getting Started
 
 This PCB Was Designed to be used with the **ESP32 SoC from Espressif Systems**. There are many versions of the Development Board which uses the ESP32, but this PCB Version is **ONLY** compatible with the *38 pin version*. 
 You can find the Gerber files of this PCB at our *Github Page* `here <https://github.com/weatherstationproject/Kits>`_. 
-The Open Source Electronics Design Software KiCad was used to design this PCB.
-You can download it here if you wish to view/modify the source files.
+The Open Source Electronics Design Software `KiCad <http://kicad-pcb.org/>`_ was used to design this PCB.
+You can download it `here <https://kicad-pcb.org/download/>`_ if you wish to view/modify the source files.
