@@ -10,12 +10,31 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
+   :caption: Overview
 
-   readme
-   kitsoverview
-   bareboneskitassembly
-   bareboneskitcoding
-   betaapi
+   /overview/readme
+   /overview/kitsoverview
+   /overview/pcboverview
+   /overview/apioverview
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Kits
+
+   /kits/bareboneskitassembly
+   /kits/bareboneskitcoding
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: APIs
+
+   /api/betaapi
+   /api/activeapi
+   /api/obsoleteapi
+
    authors
 
 Indices and tables

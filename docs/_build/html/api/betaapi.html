@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Station Project API &#8212; Read the Docs Template 1.0 documentation</title>
+    <link rel="stylesheet" href="../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Read the Docs Template 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="weather-station-project-api">
+<h1>Weather Station Project API<a class="headerlink" href="#weather-station-project-api" title="Permalink to this headline">¶</a></h1>
+<p>The Weather Station Project Beta API provides programmatic access to read and write data.</p>
+<div class="section" id="post-board-data">
+<h2>Post Board Data<a class="headerlink" href="#post-board-data" title="Permalink to this headline">¶</a></h2>
+<p>To post board data you need to make a POST call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/update</span></code></p>
+<p>Request Body Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 27%" />
+<col style="width: 17%" />
+<col style="width: 39%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Header 3</p></th>
+<th class="head"><p>Optional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>token</p></td>
+<td><p>String</p></td>
+<td><p>Value</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>temperature</p></td>
+<td><p>Number</p></td>
+<td><p>Your Board Token</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>pressure</p></td>
+<td><p>Number</p></td>
+<td><p>Temperature in Celsius</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>humidity</p></td>
+<td><p>Number</p></td>
+<td><p>Pressure in hPA</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>rainfall</p></td>
+<td><p>Number</p></td>
+<td><p>Humidity in RH</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>wind_speed</p></td>
+<td><p>Number</p></td>
+<td><p>-255</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>wind_direction</p></td>
+<td><p>Number</p></td>
+<td><p>-255</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-odd"><td><p>lux</p></td>
+<td><p>Number</p></td>
+<td><p>-255</p></td>
+<td><p>Yes</p></td>
+</tr>
+<tr class="row-even"><td><p>uv_index</p></td>
+<td><p>Number</p></td>
+<td><p>-255</p></td>
+<td><p>Yes</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span> <span class="nt">&quot;Success&quot;</span> <span class="p">:</span> <span class="kc">true</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-board-data">
+<h2>Get Board Data<a class="headerlink" href="#get-board-data" title="Permalink to this headline">¶</a></h2>
+<p>To get board data you need to make a GET call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/board/:token</span></code></p>
+<p>Path Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 15%" />
+<col style="width: 33%" />
+<col style="width: 39%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>If Value is Unknown</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>token</p></td>
+<td><p>String</p></td>
+<td><p>Your Board Token</p></td>
+<td><p>REQUIRED</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Your Board ID,
+  &quot;board_name&quot;: Your Board Name,
+  &quot;token&quot;: Your Board Token,
+  &quot;latitude&quot;: Your Board Latitude,
+  &quot;longitude&quot;: Your Board Longitude,
+  &quot;temperature&quot;: Your Latest Temperature,
+  &quot;pressure&quot;: Your Latest Pressure,
+  &quot;humidity&quot;: Your Latest Humidity,
+  &quot;rainfall&quot;: Your Latest Temperature,
+  &quot;wind_speed&quot;: Your Latest Wind Speed,
+  &quot;wind_direction&quot;: Your Latest Wind Direction,
+  &quot;lux&quot;: Your Latest Lux,
+  &quot;uv_index&quot;: Your Latest UV Index,
+  &quot;user_id&quot;: Your User ID,
+  &quot;last_time_connected&quot;: Time of Your Last Post,
+  &quot;online&quot;: 1 or 0,
+  &quot;public&quot;: 1 or 0,
+  &quot;verified&quot;: Number,
+  &quot;allow_collection&quot;: 1 or 0
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-user-data">
+<h2>Get User Data<a class="headerlink" href="#get-user-data" title="Permalink to this headline">¶</a></h2>
+<p>To get user data you need to make a GET call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/user/:uid</span></code></p>
+<p>Path Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 23%" />
+<col style="width: 29%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Optional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>uid</p></td>
+<td><p>String</p></td>
+<td><p>Your UID</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;email&quot;: Your Email,
+  &quot;password&quot;: A Hash of Your Password,
+  &quot;name&quot;: Your Name,
+  &quot;id&quot;: Your UID,
+  &quot;email_opt_in&quot;: 1,
+  &quot;verified&quot;: yes or no,
+  &quot;api&quot;: Your API Package,
+  &quot;requests&quot;: Requests You Made within the Hour,
+  &quot;discord_id&quot;: Your Discord ID,
+  &quot;discord_confirmed&quot;: 1 or 0,
+  &quot;discord_mentioned&quot;: 1 or 0,
+  &quot;discord_notified&quot;: 1 or 0,
+  &quot;admin&quot;: 1 or 0
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-public-board-data">
+<h2>Get Public Board Data<a class="headerlink" href="#get-public-board-data" title="Permalink to this headline">¶</a></h2>
+<p>To get user data you need to make a GET call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/public_boards</span></code></p>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Board ID,
+  &quot;board_name&quot;: Board Name,
+  &quot;latitude&quot;: Board Latitude,
+  &quot;longitude&quot;: Board Longitude,
+  &quot;temperature&quot;: Latest Temperature,
+  &quot;pressure&quot;: Latest Pressure,
+  &quot;humidity&quot;: Latest Humidity,
+  &quot;rainfall&quot;: Latest Temperature,
+  &quot;wind_speed&quot;: Latest Wind Speed,
+  &quot;wind_direction&quot;: Latest Wind Direction,
+  &quot;lux&quot;: Latest Lux,
+  &quot;uv_index&quot;: Latest UV Index,
+  &quot;last_time_connected&quot;: Last Time Connected,
+  &quot;online&quot;: 1 or 0,
+  &quot;public&quot;: 1
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-public-board-id">
+<h2>Get Public Board (ID)<a class="headerlink" href="#get-public-board-id" title="Permalink to this headline">¶</a></h2>
+<p>To get board data by ID you need to make a GET call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/public_boards/id/:id</span></code></p>
+<p>Path Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 23%" />
+<col style="width: 29%" />
+<col style="width: 29%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Optional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>id</p></td>
+<td><p>String</p></td>
+<td><p>Board ID</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Board ID,
+  &quot;board_name&quot;: Board Name,
+  &quot;latitude&quot;: Board Latitude,
+  &quot;longitude&quot;: Board Longitude,
+  &quot;temperature&quot;: Latest Temperature,
+  &quot;pressure&quot;: Latest Pressure,
+  &quot;humidity&quot;: Latest Humidity,
+  &quot;rainfall&quot;: Latest Temperature,
+  &quot;wind_speed&quot;: Latest Wind Speed,
+  &quot;wind_direction&quot;: Latest Wind Direction,
+  &quot;lux&quot;: Latest Lux,
+  &quot;uv_index&quot;: Latest UV Index,
+  &quot;last_time_connected&quot;: Last Time Connected,
+  &quot;online&quot;: 1 or 0,
+  &quot;public&quot;: 1
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-public-board-name">
+<h2>Get Public Board (Name)<a class="headerlink" href="#get-public-board-name" title="Permalink to this headline">¶</a></h2>
+<p>To get board data by name you need to make a GET call to the following url:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/data/public_boards/name/:name</span></code></p>
+<p>Path Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 12%" />
+<col style="width: 18%" />
+<col style="width: 15%" />
+<col style="width: 44%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Optional</p></th>
+<th class="head"><p>If Value is Unknown</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>name</p></td>
+<td><p>String</p></td>
+<td><p>Board Name</p></td>
+<td><p>No</p></td>
+<td><p>First Letters of Board Name</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Board ID,
+  &quot;board_name&quot;: Board Name,
+  &quot;latitude&quot;: Board Latitude,
+  &quot;longitude&quot;: Board Longitude,
+  &quot;temperature&quot;: Latest Temperature,
+  &quot;pressure&quot;: Latest Pressure,
+  &quot;humidity&quot;: Latest Humidity,
+  &quot;rainfall&quot;: Latest Temperature,
+  &quot;wind_speed&quot;: Latest Wind Speed,
+  &quot;wind_direction&quot;: Latest Wind Direction,
+  &quot;lux&quot;: Latest Lux,
+  &quot;uv_index&quot;: Latest UV Index,
+  &quot;last_time_connected&quot;: Last Time Connected,
+  &quot;online&quot;: 1 or 0,
+  &quot;public&quot;: 1
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-update-latest">
+<h2>Get Update (Latest)<a class="headerlink" href="#get-update-latest" title="Permalink to this headline">¶</a></h2>
+<p>To get the latest updates from us, make a GET request to this link:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/updates/latest</span></code></p>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Update ID,
+  &quot;author&quot;: Update Author,
+  &quot;text&quot;: Update Text,
+  &quot;time&quot;: Update Time
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-update-id">
+<h2>Get Update (ID)<a class="headerlink" href="#get-update-id" title="Permalink to this headline">¶</a></h2>
+<p>To get the latest updates from us, make a GET request to this link:
+<code class="docutils literal notranslate"><span class="pre">https://beta.api.weatherstationproject.com/updates/id/:updateID</span></code></p>
+<p>Path Parameters</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 28%" />
+<col style="width: 21%" />
+<col style="width: 26%" />
+<col style="width: 26%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Value</p></th>
+<th class="head"><p>Optional</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>updateID</p></td>
+<td><p>String</p></td>
+<td><p>updateID</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+<p>Output</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span>{
+  &quot;id&quot;: Update ID,
+  &quot;author&quot;: Update Author,
+  &quot;text&quot;: Update Text,
+  &quot;time&quot;: Update Time
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="get-machine-learning-data">
+<h2>Get Machine Learning Data<a class="headerlink" href="#get-machine-learning-data" title="Permalink to this headline">¶</a></h2>
+<p>Coming Soon!</p>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>The WSP Beta API uses the following error codes:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 24%" />
+<col style="width: 76%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Error Code</p></th>
+<th class="head"><p>Meaning</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MISSING_TOKEN</p></td>
+<td><p>A token needed to process the request was not specified.</p></td>
+</tr>
+<tr class="row-odd"><td><p>NO_BOARD</p></td>
+<td><p>The board that was being searched for was not found.</p></td>
+</tr>
+<tr class="row-even"><td><p>ERR_MISSING_JSON</p></td>
+<td><p>There was a missing parameter in the request body.</p></td>
+</tr>
+<tr class="row-odd"><td><p>SQL_ERROR</p></td>
+<td><p>There was error within the server.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Weather Station Project API</a><ul>
+<li><a class="reference internal" href="#post-board-data">Post Board Data</a></li>
+<li><a class="reference internal" href="#get-board-data">Get Board Data</a></li>
+<li><a class="reference internal" href="#get-user-data">Get User Data</a></li>
+<li><a class="reference internal" href="#get-public-board-data">Get Public Board Data</a></li>
+<li><a class="reference internal" href="#get-public-board-id">Get Public Board (ID)</a></li>
+<li><a class="reference internal" href="#get-public-board-name">Get Public Board (Name)</a></li>
+<li><a class="reference internal" href="#get-update-latest">Get Update (Latest)</a></li>
+<li><a class="reference internal" href="#get-update-id">Get Update (ID)</a></li>
+<li><a class="reference internal" href="#get-machine-learning-data">Get Machine Learning Data</a></li>
+<li><a class="reference internal" href="#errors">Errors</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/api/betaapi.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Read the Docs Template 1.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2014, Read the Docs.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.1.2.
+    </div>
+  </body>
+</html>
