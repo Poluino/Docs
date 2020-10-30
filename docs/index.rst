@@ -14,6 +14,7 @@ Contents:
    readme
    kitsoverview
    bareboneskitassembly
+   betaapi
    authors
 
 Indices and tables
