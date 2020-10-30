@@ -100,19 +100,19 @@ Output
 .. code-block:: json
  
   {
-    "email": Your Email,
-    "password": A Hash of Your Password,
-    "name": Your Name,
-    "id": Your UID,
+    "email": "Your Email",
+    "password": "A Hash of Your Password",
+    "name": "Your Name",
+    "id": "Your UID",
     "email_opt_in": 1,
-    "verified": yes or no,
-    "api": Your API Package,
-    "requests": Requests You Made within the Hour,
-    "discord_id": Your Discord ID,
-    "discord_confirmed": 1 or 0,
-    "discord_mentioned": 1 or 0,
-    "discord_notified": 1 or 0,
-    "admin": 1 or 0
+    "verified": "yes or no",
+    "api": "Your API Package",
+    "requests": "Requests You Made within the Hour",
+    "discord_id": "Your Discord ID",
+    "discord_confirmed": "1 or 0",
+    "discord_mentioned": "1 or 0",
+    "discord_notified": "1 or 0",
+    "admin": "1 or 0"
   }
 
 Get Public Board Data
@@ -127,20 +127,20 @@ Output
  
   [
     {
-      "id": Board ID,
-      "board_name": Board Name,
-      "latitude": Board Latitude,
-      "longitude": Board Longitude,
-      "temperature": Latest Temperature,
-      "pressure": Latest Pressure,
-      "humidity": Latest Humidity,
-      "rainfall": Latest Temperature,
-      "wind_speed": Latest Wind Speed,
-      "wind_direction": Latest Wind Direction,
-      "lux": Latest Lux,
-      "uv_index": Latest UV Index,
-      "last_time_connected": Last Time Connected,
-      "online": 1 or 0,
+      "id": "Board ID",
+      "board_name": "Board Name",
+      "latitude": "Board Latitude",
+      "longitude": "Board Longitude",
+      "temperature": "Latest Temperature",
+      "pressure": "Latest Pressure",
+      "humidity": "Latest Humidity",
+      "rainfall": "Latest Temperature",
+      "wind_speed": "Latest Wind Speed",
+      "wind_direction": "Latest Wind Direction",
+      "lux": "Latest Lux",
+      "uv_index": "Latest UV Index",
+      "last_time_connected": "Last Time Connected",
+      "online": "1 or 0",
       "public": 1
     },
     ...
@@ -164,21 +164,26 @@ Output
 
 .. code-block:: json
  
-  {
-    "email": Your Email,
-    "password": A Hash of Your Password,
-    "name": Your Name,
-    "id": Your UID,
-    "email_opt_in": 1,
-    "verified": yes or no,
-    "api": Your API Package,
-    "requests": Requests You Made within the Hour,
-    "discord_id": Your Discord ID,
-    "discord_confirmed": 1 or 0,
-    "discord_mentioned": 1 or 0,
-    "discord_notified": 1 or 0,
-    "admin": 1 or 0
-  }
+  [
+    {
+      "id": "Board ID",
+      "board_name": "Board Name",
+      "latitude": "Board Latitude",
+      "longitude": "Board Longitude",
+      "temperature": "Board Temperature",
+      "pressure": "Board Pressure",
+      "humidity": "Board Humidity",
+      "rainfall": "Board Rainfall",
+      "soil_moisture": "Board Soil Moistyre",
+      "wind_speed": "Board Wind Speed",
+      "wind_direction": "Board Wind Direction",
+      "lux": "Board Lux",
+      "uv_index": "Board UV Index",
+      "last_time_connected": "Last Time Connected",
+      "online": "1 or 0",
+      "public": 1
+    }
+  ]
 
 Get Public Board (Name)
 -----------------------
@@ -200,20 +205,20 @@ Output
  
   [
     {
-      "id": Board ID,
-      "board_name": Board Name,
-      "latitude": Board Latitude,
-      "longitude": Board Longitude,
-      "temperature": Latest Temperature,
-      "pressure": Latest Pressure,
-      "humidity": Latest Humidity,
-      "rainfall": Latest Temperature,
-      "wind_speed": Latest Wind Speed,
-      "wind_direction": Latest Wind Direction,
-      "lux": Latest Lux,
-      "uv_index": Latest UV Index,
-      "last_time_connected": Last Time Connected,
-      "online": 1 or 0,
+      "id": "Board ID",
+      "board_name": "Board Name",
+      "latitude": "Board Latitude",
+      "longitude": "Board Longitude",
+      "temperature": "Latest Temperature",
+      "pressure": "Latest Pressure",
+      "humidity": "Latest Humidity",
+      "rainfall": "Latest Temperature",
+      "wind_speed": "Latest Wind Speed",
+      "wind_direction": "Latest Wind Direction",
+      "lux": Latest "Lux",
+      "uv_index": "Latest UV Index",
+      "last_time_connected": "Last Time Connected",
+      "online": "1 or 0",
       "public": 1
     }
   ]
