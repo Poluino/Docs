@@ -16,7 +16,7 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Weather Station Project API" href="betaapi.html" />
+    <link rel="next" title="WSP API" href="betaapi.html" />
     <link rel="prev" title="Barebones Kit Assembly" href="bareboneskitassembly.html" /> 
   </head><body>
     <div class="related" role="navigation" aria-label="related navigation">
@@ -26,7 +26,7 @@
           <a href="genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
-          <a href="betaapi.html" title="Weather Station Project API"
+          <a href="betaapi.html" title="WSP API"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="bareboneskitassembly.html" title="Barebones Kit Assembly"
@@ -148,9 +148,9 @@ This enables the ESP32 to connect to your <strong>Home / Office WiFi Network</st
         <span class="n">ESP</span><span class="p">.</span><span class="n">restart</span><span class="p">();</span>
     <span class="p">}</span>
 
-    <span class="n">temperature</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">();</span> <span class="c1">//Retrieves the Temperature Data from the BME280.</span>
-    <span class="n">pressure</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readPressure</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span> <span class="c1">//Retrieves the Pressure Data from the BME280.</span>
-    <span class="n">humidity</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span> <span class="c1">//Retrieves the Humidity Data from the BME280.</span>
+    <span class="n">temperature</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readTemperature</span><span class="p">();</span>
+    <span class="n">pressure</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readPressure</span><span class="p">()</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+    <span class="n">humidity</span> <span class="o">=</span> <span class="n">bme</span><span class="p">.</span><span class="n">readHumidity</span><span class="p">();</span>
 
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Temp: &quot;</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
@@ -159,42 +159,41 @@ This enables the ESP32 to connect to your <strong>Home / Office WiFi Network</st
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Press: &quot;</span><span class="p">);</span>
     <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">pressure</span><span class="p">);</span>
 
-    <span class="n">String</span> <span class="n">str_temperature</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span> <span class="c1">//Making a String Variable hold the Temperature data for further use.</span>
-    <span class="n">String</span> <span class="n">str_pressure</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">pressure</span><span class="p">);</span> <span class="c1">//Making a String Variable hold the Pressure data for further use.</span>
-    <span class="n">String</span> <span class="n">str_humidity</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span> <span class="c1">//Making a String Variable hold the Humidity data for further use.</span>
+    <span class="n">String</span> <span class="n">str_temperature</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">temperature</span><span class="p">);</span>
+    <span class="n">String</span> <span class="n">str_pressure</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">pressure</span><span class="p">);</span>
+    <span class="n">String</span> <span class="n">str_humidity</span> <span class="o">=</span> <span class="n">String</span><span class="p">(</span><span class="n">humidity</span><span class="p">);</span>
 
     <span class="n">Serial</span><span class="p">.</span><span class="n">print</span><span class="p">(</span><span class="s">&quot;[HTTPS] begin...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">http</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;https://beta.api.weatherstationproject.com/data/update&quot;</span><span class="p">))</span> <span class="p">{</span>  <span class="c1">// HTTPS connection between the ESP32 and the Website is established.</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">http</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="s">&quot;https://beta.api.weatherstationproject.com/data/update&quot;</span><span class="p">))</span> <span class="p">{</span>
 
-    <span class="n">http</span><span class="p">.</span><span class="n">addHeader</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span> <span class="c1">//A Header is added to the Connection</span>
+    <span class="n">http</span><span class="p">.</span><span class="n">addHeader</span><span class="p">(</span><span class="s">&quot;Content-Type&quot;</span><span class="p">,</span> <span class="s">&quot;application/json&quot;</span><span class="p">);</span>
     <span class="p">}</span>
 
-    <span class="n">StaticJsonDocument</span><span class="o">&lt;</span><span class="mi">200</span><span class="o">&gt;</span> <span class="n">json_data</span><span class="p">;</span> <span class="c1">//The JSON Document which will be used to send the data to the website is created</span>
-    <span class="c1">// Add values in the document</span>
-    <span class="c1">//</span>
-    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;token&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;*your_token*&quot;</span><span class="p">;</span> <span class="c1">//Paste your board&#39;s token here form your account page on our Website. 5f1879770056d</span>
-    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;rainfall&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>            <span class="c1">//These are the parameters supported by our API. As the Barebones Kit Only comes with</span>
-    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;wind_speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>          <span class="c1">//Temperature, Pressure, and Humidity, we are using the value &quot;-255&quot; to indicate that</span>
-    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;wind_direction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>      <span class="c1">//the respective sensors are not connected / used.</span>
+    <span class="n">StaticJsonDocument</span><span class="o">&lt;</span><span class="mi">200</span><span class="o">&gt;</span> <span class="n">json_data</span><span class="p">;</span>
+
+    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;token&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;*your_token*&quot;</span><span class="p">;</span>
+    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;rainfall&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
+    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;wind_speed&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
+    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;wind_direction&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
     <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;soil_moisture&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
     <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;lux&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
     <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;uv_index&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;-255&quot;</span><span class="p">;</span>
-    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">str_temperature</span><span class="p">;</span> <span class="c1">//We are using the String variable created earlier here to add it to the JSON document</span>
+    <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;temperature&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">str_temperature</span><span class="p">;</span>
     <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;pressure&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">str_pressure</span><span class="p">;</span>
     <span class="n">json_data</span><span class="p">[</span><span class="s">&quot;humidity&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">str_humidity</span><span class="p">;</span>
 
     <span class="n">String</span> <span class="n">requestBody</span><span class="p">;</span>
-    <span class="n">serializeJson</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">requestBody</span><span class="p">);</span> <span class="c1">//Finalizes the JSON document and makes it ready for transfer.</span>
+    <span class="n">serializeJson</span><span class="p">(</span><span class="n">json_data</span><span class="p">,</span> <span class="n">requestBody</span><span class="p">);</span>
 
 
-    <span class="kt">int</span> <span class="n">httpResponseCode</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">POST</span><span class="p">(</span><span class="n">requestBody</span><span class="p">);</span> <span class="c1">//Handles the POST Request to the API</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">httpResponseCode</span><span class="p">);</span> <span class="c1">// Prints out the Response Code of the API. Useful to determine if the code is working correctly.</span>
+    <span class="kt">int</span> <span class="n">httpResponseCode</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">POST</span><span class="p">(</span><span class="n">requestBody</span><span class="p">);</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">httpResponseCode</span><span class="p">);</span>
     <span class="n">String</span> <span class="n">payload</span> <span class="o">=</span> <span class="n">http</span><span class="p">.</span><span class="n">getString</span><span class="p">();</span>
-    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">payload</span><span class="p">);</span> <span class="c1">// Prints out the Response paylode of the API. Gives a more human readable version of the Response Code.</span>
+    <span class="n">Serial</span><span class="p">.</span><span class="n">println</span><span class="p">(</span><span class="n">payload</span><span class="p">);</span>
 
-    <span class="n">http</span><span class="p">.</span><span class="n">end</span><span class="p">();</span> <span class="c1">//Ends the HTTP Connection to the website as the work is done.</span>
+    <span class="n">http</span><span class="p">.</span><span class="n">end</span><span class="p">();</span>
 
-    <span class="n">delay</span><span class="p">(</span><span class="n">timerDelay</span><span class="p">);</span> <span class="c1">//Starts the delay which was initialized in the start of the code. After the set time, the board sends data to the website again.</span>
+    <span class="n">delay</span><span class="p">(</span><span class="n">timerDelay</span><span class="p">);</span>
 
     <span class="p">}</span>
 </pre></div>
@@ -299,7 +298,7 @@ This enables the ESP32 to connect to your <strong>Home / Office WiFi Network</st
                         title="previous chapter">Barebones Kit Assembly</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="betaapi.html"
-                        title="next chapter">Weather Station Project API</a></p>
+                        title="next chapter">WSP API</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
@@ -328,7 +327,7 @@ This enables the ESP32 to connect to your <strong>Home / Office WiFi Network</st
           <a href="genindex.html" title="General Index"
              >index</a></li>
         <li class="right" >
-          <a href="betaapi.html" title="Weather Station Project API"
+          <a href="betaapi.html" title="WSP API"
              >next</a> |</li>
         <li class="right" >
           <a href="bareboneskitassembly.html" title="Barebones Kit Assembly"

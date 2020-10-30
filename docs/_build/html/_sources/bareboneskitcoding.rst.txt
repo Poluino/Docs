@@ -131,9 +131,9 @@ loop ():
             ESP.restart();
         }
 
-        temperature = bme.readTemperature(); //Retrieves the Temperature Data from the BME280.
-        pressure = bme.readPressure() / 100; //Retrieves the Pressure Data from the BME280.
-        humidity = bme.readHumidity(); //Retrieves the Humidity Data from the BME280.
+        temperature = bme.readTemperature();
+        pressure = bme.readPressure() / 100;
+        humidity = bme.readHumidity();
 
         Serial.println("Temp: ");
         Serial.print(temperature);
@@ -142,42 +142,41 @@ loop ():
         Serial.println("Press: ");
         Serial.println(pressure);
 
-        String str_temperature = String(temperature); //Making a String Variable hold the Temperature data for further use.
-        String str_pressure = String(pressure); //Making a String Variable hold the Pressure data for further use.
-        String str_humidity = String(humidity); //Making a String Variable hold the Humidity data for further use.
+        String str_temperature = String(temperature);
+        String str_pressure = String(pressure);
+        String str_humidity = String(humidity);
 
         Serial.print("[HTTPS] begin...\n");
-        if (http.begin("https://beta.api.weatherstationproject.com/data/update")) {  // HTTPS connection between the ESP32 and the Website is established.
+        if (http.begin("https://beta.api.weatherstationproject.com/data/update")) {
         
-        http.addHeader("Content-Type", "application/json"); //A Header is added to the Connection
+        http.addHeader("Content-Type", "application/json");
         }
 
-        StaticJsonDocument<200> json_data; //The JSON Document which will be used to send the data to the website is created
-        // Add values in the document
-        //
-        json_data["token"] = "*your_token*"; //Paste your board's token here form your account page on our Website. 5f1879770056d
-        json_data["rainfall"] = "-255";            //These are the parameters supported by our API. As the Barebones Kit Only comes with
-        json_data["wind_speed"] = "-255";          //Temperature, Pressure, and Humidity, we are using the value "-255" to indicate that 
-        json_data["wind_direction"] = "-255";      //the respective sensors are not connected / used.
+        StaticJsonDocument<200> json_data;
+        
+        json_data["token"] = "*your_token*";
+        json_data["rainfall"] = "-255";
+        json_data["wind_speed"] = "-255"; 
+        json_data["wind_direction"] = "-255";
         json_data["soil_moisture"] = "-255";
         json_data["lux"] = "-255";
         json_data["uv_index"] = "-255";               
-        json_data["temperature"] = str_temperature; //We are using the String variable created earlier here to add it to the JSON document
+        json_data["temperature"] = str_temperature;
         json_data["pressure"] = str_pressure;
         json_data["humidity"] = str_humidity;
 
         String requestBody;
-        serializeJson(json_data, requestBody); //Finalizes the JSON document and makes it ready for transfer.
+        serializeJson(json_data, requestBody);
 
 
-        int httpResponseCode = http.POST(requestBody); //Handles the POST Request to the API
-        Serial.println(httpResponseCode); // Prints out the Response Code of the API. Useful to determine if the code is working correctly.
+        int httpResponseCode = http.POST(requestBody);
+        Serial.println(httpResponseCode);
         String payload = http.getString(); 
-        Serial.println(payload); // Prints out the Response paylode of the API. Gives a more human readable version of the Response Code.
+        Serial.println(payload);
 
-        http.end(); //Ends the HTTP Connection to the website as the work is done.
+        http.end();
         
-        delay(timerDelay); //Starts the delay which was initialized in the start of the code. After the set time, the board sends data to the website again.
+        delay(timerDelay);
 
         }
 
