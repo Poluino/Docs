@@ -14,7 +14,8 @@ It collects the data of **3** basic environmental features, namely;
 #. Temperature
 #. Air Pressure
 
-If you have purchased the Pre-Built version, go ahead and skip Steps 1 - 4
+.. tip::
+    If you have purchased the Prebuilt version please skip Steps 1 - 4
 
 Step 1 - Opening the Package:
 -----------------------------
