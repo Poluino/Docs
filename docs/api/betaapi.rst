@@ -1,4 +1,4 @@
-Weather Station Project API
+Weather Station Project Beta API
 ===========================
 
 The Weather Station Project Beta API provides programmatic access to read and write data.
@@ -14,15 +14,15 @@ Request Body Parameters
 +----------------+----------+-----------------------+----------+
 | Field          | Type     | Header 3              | Optional |
 +================+==========+=======================+==========+
-| token          | String   | Value                 | No       |
+| token          | String   | Your Board Token      | No       |
 +----------------+----------+-----------------------+----------+
-| temperature    | Number   | Your Board Token      | Yes      |
+| temperature    | Number   | Temperature in Celsius| Yes      |
 +----------------+----------+-----------------------+----------+
-| pressure       | Number   | Temperature in Celsius| Yes      |
+| pressure       | Number   | Pressure in hPA       | Yes      |
 +----------------+----------+-----------------------+----------+
-| humidity       | Number   | Pressure in hPA       | Yes      |
+| humidity       | Number   | Humidity in RH        | Yes      |
 +----------------+----------+-----------------------+----------+
-| rainfall       | Number   | Humidity in RH        | Yes      |
+| rainfall       | Number   |                       | Yes      |
 +----------------+----------+-----------------------+----------+
 | wind_speed     | Number   | -255                  | Yes      |
 +----------------+----------+-----------------------+----------+
