@@ -1,6 +1,5 @@
-Weather Station Project Beta API
-===========================
-
+Beta API
+=========
 The Weather Station Project Beta API provides programmatic access to read and write data.
 
 Post Board Data
@@ -57,7 +56,6 @@ Output
 
 .. code-block:: json
  
-
   {
     "id": Your Board ID,
     "board_name": Your Board Name,
