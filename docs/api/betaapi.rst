@@ -11,7 +11,7 @@ To post board data you need to make a POST call to the following url:
 Request Body Parameters
 
 +----------------+----------+-----------------------+----------+
-| Field          | Type     | Header 3              | Optional |
+| Field          | Type     | Value                 | Optional |
 +================+==========+=======================+==========+
 | token          | String   | Your Board Token      | No       |
 +----------------+----------+-----------------------+----------+
