@@ -258,7 +258,42 @@ Output
 Get Machine Learning Data
 -------------------------
 
-Coming Soon!
+To get the latest updates from us, make a GET request to this link:
+``https://beta.api.weatherstationproject.com/ml/:token``
+
+Path Parameters
+
++-------+--------+------------------+---------------------+
+| Field | Type   | Value            | If Value is Unknown |
++=======+========+==================+=====================+
+| token | String | Your Board Token | REQUIRED            |
++-------+--------+------------------+---------------------+
+
+Output
+
+.. code-block:: json
+ 
+  {
+    "token": Your Board Token,
+    "latitude": Your Latitude,
+    "longitude": Your Longitude,
+    "year": Year when Data was Recorded,
+    "month": Month when Data was Recorded in Numbers(s),
+    "date": Day when Data was Recorded in Numbers(s),
+    "hour": Hour when Data was Recorded in Numbers(s),
+    "min_temp": Minimum Temperature Recorded,
+    "max_temp": Maximum Temperature Recorded,
+    "min_press": Minimum Pressure Recorded,
+    "max_press": Maximum Pressure Recorded,
+    "min_hum": Minimum Humidity Recorded,
+    "max_hum": Maximum Humidity Recorded,
+    "min_rain": Minimum Rainfall Recorded,
+    "max_rain": Maximum Rainfall Recorded,
+    "min_wind_speed": Minimum Wind Speed Recorded,
+    "max_wind_speed": Maximum Wind Speed Recorded,
+    "min_wind_direction": Minimum Wind Direction Recorded,
+    "max_wind_direction": Maximum Wind Direction Recorded
+  }
 
 Errors
 ------
