@@ -44,7 +44,7 @@ Welcome to Weather Station Project's documentation!
    /pcb/fullpcbv1-2
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 5
    :hidden:
    :caption: About
    /others/licenses
