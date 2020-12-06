@@ -311,7 +311,7 @@ subsection 3.2.
 The Software developed by Weather Station Project use this license. This includes our Website Code, Development Board Code, etc..
 
                     **GNU GENERAL PUBLIC LICENSE**
-                       Version 3, 29 June 2007
+                       **Version 3, 29 June 2007**
 
  Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
