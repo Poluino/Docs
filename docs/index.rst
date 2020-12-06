@@ -47,6 +47,7 @@ Welcome to Weather Station Project's documentation!
    :maxdepth: 5
    :hidden:
    :caption: About
+   
    /others/licenses
    /others/authors
    /others/contributing
