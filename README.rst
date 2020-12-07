@@ -50,5 +50,4 @@ License
 -------
 
 | The project is licensed under the **GNU General Public License V2** 
-| Our Hardware Follow the **TAPR Open Source License**
-| We are OSHWA Certified! OSHWA UID: *yet to receive*
+| Our Hardware Follow the **CERN Open Source License**
