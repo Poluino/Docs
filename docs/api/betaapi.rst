@@ -2,8 +2,8 @@ Beta API
 =========
 The Weather Station Project Beta API provides programmatic access to read and write data.
 
-Post Board Data
----------------
+POST /data/update
+-----------------
 
 To post board data you need to make a POST call to the following url:
 ``https://beta.api.weatherstationproject.com/data/update``
@@ -38,8 +38,8 @@ Output
 
    { "Success" : true}
 
-Get Board Data
---------------
+GET /data/board/:token
+----------------------
 
 To get board data you need to make a GET call to the following url:
 ``https://beta.api.weatherstationproject.com/data/board/:token``
@@ -78,8 +78,8 @@ Output
     "allow_collection": 1 or 0
   }
 
-Get User Data
--------------
+GET /data/user/:uid
+-------------------
 
 To get user data you need to make a GET call to the following url:
 ``https://beta.api.weatherstationproject.com/data/user/:uid``
@@ -112,8 +112,8 @@ Output
     "admin": 1 or 0
   }
 
-Get Public Board Data
----------------------
+GET /data/public_boards
+-----------------------
 
 To get user data you need to make a GET call to the following url:
 ``https://beta.api.weatherstationproject.com/data/public_boards``
@@ -141,8 +141,8 @@ Output
   }
 
 
-Get Public Board (ID)
----------------------
+GET /data/public_boards/id/:id
+------------------------------
 
 To get board data by ID you need to make a GET call to the following url:
 ``https://beta.api.weatherstationproject.com/data/public_boards/id/:id``
@@ -177,8 +177,8 @@ Output
     "public": 1
   }
   
-Get Public Board (Name)
------------------------
+GET /data/public_boards/name/:name
+----------------------------------
 
 To get board data by name you need to make a GET call to the following url:
 ``https://beta.api.weatherstationproject.com/data/public_boards/name/:name``
@@ -213,7 +213,7 @@ Output
     "public": 1
   }
   
-Get Update (Latest)
+GET /updates/latest
 -------------------
 
 To get the latest updates from us, make a GET request to this link:
@@ -230,8 +230,8 @@ Output
     "time": Update Time
   }
 
-Get Update (ID)
--------------------
+GET /updates/id/:updateID
+-------------------------
 
 To get the latest updates from us, make a GET request to this link:
 ``https://beta.api.weatherstationproject.com/updates/id/:updateID``
@@ -255,8 +255,8 @@ Output
     "time": Update Time
   }
 
-Get Machine Learning Data
--------------------------
+GET /ml/:token
+--------------
 
 To get the latest updates from us, make a GET request to this link:
 ``https://beta.api.weatherstationproject.com/ml/:token``
