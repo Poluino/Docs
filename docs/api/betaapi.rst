@@ -1,6 +1,11 @@
+********
 Beta API
-=========
+********
+
 The Weather Station Project Beta API provides programmatic access to read and write data.
+
+Sending and Receiving Weather Data
+==================================
 
 POST /data/update
 -----------------
@@ -76,40 +81,6 @@ Output
     "public": 1 or 0,
     "verified": Number,
     "allow_collection": 1 or 0
-  }
-
-GET /data/user/:uid
--------------------
-
-To get user data you need to make a GET call to the following url:
-``https://beta.api.weatherstationproject.com/data/user/:uid``
-
-Path Parameters
-
-+-------+--------+----------+----------+
-| Field | Type   | Value    | Optional |
-+=======+========+==========+==========+
-| uid   | String | Your UID | No       |
-+-------+--------+----------+----------+
-
-Output
-
-.. code-block:: json
- 
-  {
-    "email": Your Email,
-    "password": A Hash of Your Password,
-    "name": Your Name,
-    "id": Your UID,
-    "email_opt_in": 1,
-    "verified": yes or no,
-    "api": Your API Package,
-    "requests": Requests You Made within the Hour,
-    "discord_id": Your Discord ID,
-    "discord_confirmed": 1 or 0,
-    "discord_mentioned": 1 or 0,
-    "discord_notified": 1 or 0,
-    "admin": 1 or 0
   }
 
 GET /data/public_boards
@@ -212,7 +183,47 @@ Output
     "online": 1 or 0,
     "public": 1
   }
-  
+
+Getting User Data
+=================
+
+GET /data/user/:uid
+-------------------
+
+To get user data you need to make a GET call to the following url:
+``https://beta.api.weatherstationproject.com/data/user/:uid``
+
+Path Parameters
+
++-------+--------+----------+----------+
+| Field | Type   | Value    | Optional |
++=======+========+==========+==========+
+| uid   | String | Your UID | No       |
++-------+--------+----------+----------+
+
+Output
+
+.. code-block:: json
+ 
+  {
+    "email": Your Email,
+    "password": A Hash of Your Password,
+    "name": Your Name,
+    "id": Your UID,
+    "email_opt_in": 1,
+    "verified": yes or no,
+    "api": Your API Package,
+    "requests": Requests You Made within the Hour,
+    "discord_id": Your Discord ID,
+    "discord_confirmed": 1 or 0,
+    "discord_mentioned": 1 or 0,
+    "discord_notified": 1 or 0,
+    "admin": 1 or 0
+  }
+
+Getting Updates from Poluino
+============================
+
 GET /updates/latest
 -------------------
 
@@ -296,7 +307,7 @@ Output
   }
 
 Errors
-------
+======
 
 The WSP Beta API uses the following error codes:
 
