@@ -266,6 +266,9 @@ Output
     "time": Update Time
   }
 
+Getting Machine Learning Data
+=============================
+
 GET /ml/:token
 --------------
 
