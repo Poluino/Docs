@@ -7,42 +7,6 @@ The Poluino API provides programmatic access to read and write data.
 Sending and Receiving Weather Data
 ==================================
 
-POST /data/update
------------------
-
-To post board data you need to make a POST call to the following url:
-``https://api.poluino.xyz/data/update``
-
-Request Body Parameters
-
-+----------------+----------+-----------------------+----------+
-| Field          | Type     | Value                 | Optional |
-+================+==========+=======================+==========+
-| token          | String   | Your Board Token      | No       |
-+----------------+----------+-----------------------+----------+
-| temperature    | Number   | Temperature in Celsius| Yes      |
-+----------------+----------+-----------------------+----------+
-| pressure       | Number   | Pressure in hPA       | Yes      |
-+----------------+----------+-----------------------+----------+
-| humidity       | Number   | Humidity in RH        | Yes      |
-+----------------+----------+-----------------------+----------+
-| rainfall       | Number   |                       | Yes      |
-+----------------+----------+-----------------------+----------+
-| wind_speed     | Number   | -255                  | Yes      |
-+----------------+----------+-----------------------+----------+
-| wind_direction | Number   | -255                  | Yes      |
-+----------------+----------+-----------------------+----------+
-| lux            | Number   | -255                  | Yes      |
-+----------------+----------+-----------------------+----------+
-| uv_index       | Number   | -255                  | Yes      |
-+----------------+----------+-----------------------+----------+
-
-Output
-
-.. code-block:: json
-
-   { "Success" : true}
-
 GET /data/board/:token
 ----------------------
 
@@ -63,24 +27,16 @@ Output
  
   {
     "id": Your Board ID,
-    "board_name": Your Board Name,
-    "token": Your Board Token,
+    "name": Your Board Name,
+    "owner": Your User ID,
     "latitude": Your Board Latitude,
     "longitude": Your Board Longitude,
     "temperature": Your Latest Temperature,
     "pressure": Your Latest Pressure,
     "humidity": Your Latest Humidity,
-    "rainfall": Your Latest Temperature,
-    "wind_speed": Your Latest Wind Speed,
-    "wind_direction": Your Latest Wind Direction,
-    "lux": Your Latest Lux,
-    "uv_index": Your Latest UV Index,
-    "user_id": Your User ID,
-    "last_time_connected": Time of Your Last Post,
-    "online": 1 or 0,
     "public": 1 or 0,
-    "verified": Number,
-    "allow_collection": 1 or 0
+    "verified": 1 or 0,
+    "online": 1 or 0,
   }
 
 GET /data/public_boards
@@ -119,21 +75,38 @@ Output
 
   {
     "id": Board ID,
-    "board_name": Board Name,
+    "name": Board Name,
     "latitude": Board Latitude,
     "longitude": Board Longitude,
     "temperature": Latest Temperature,
     "pressure": Latest Pressure,
     "humidity": Latest Humidity,
-    "rainfall": Latest Temperature,
-    "wind_speed": Latest Wind Speed,
-    "wind_direction": Latest Wind Direction,
-    "lux": Latest Lux,
-    "uv_index": Latest UV Index,
-    "last_time_connected": Last Time Connected,
+    "public": 1 or 0,
+    "verified": 1 or 0,
     "online": 1 or 0,
-    "public": 1
   }
+
+POST /data/update
+-----------------
+
+To get user data you need to make a GET call to the following url:
+``https://api.poluino.xyz/data/update``
+
+Body Parameters
+
++-------------+--------+-------------+----------+
+| Field       | Type   | Value       | Optional |
++=============+========+=============+==========+
+| Temperature | Number | Temperature | Yes      |
++-------------+--------+-------------+----------+
+| Pressure    | Number | Pressure    | Yes      |
++-------------+--------+-------------+----------+
+| Humidity    | Number | Humidity    | Yes      |
++-------------+--------+-------------+----------+
+| Token       | Number | String      | No       |
++-------------+--------+-------------+----------+
+
+The body should be in JSON format.
 
 Getting User Data
 =================
@@ -157,45 +130,13 @@ Output
 .. code-block:: json
  
   {
-    "email": Your Email,
-    "password": A Hash of Your Password,
-    "name": Your Name,
     "id": Your UID,
-    "email_opt_in": 1,
-    "verified": yes or no,
-    "api": Your API Package,
-    "requests": Requests You Made within the Hour,
-    "discord_id": Your Discord ID,
-    "discord_confirmed": 1 or 0,
-    "discord_mentioned": 1 or 0,
-    "discord_notified": 1 or 0,
-    "admin": 1 or 0
+    "name": Your Name,
+    "accType": Number,
+    "loginMethod": Number,
+    "discordId": Your Discord ID,
+    "verified": 1 or 0,
   }
-
-Posting Data to the API
-=======================
-
-POST /data/update
------------------
-
-To get user data you need to make a GET call to the following url:
-``https://api.poluino.xyz/data/update``
-
-Body Parameters
-
-+-------------+--------+-------------+----------+
-| Field       | Type   | Value       | Optional |
-+=============+========+=============+==========+
-| Temperature | Number | Temperature | Yes      |
-+-------------+--------+-------------+----------+
-| Pressure    | Number | Pressure    | Yes      |
-+-------------+--------+-------------+----------+
-| Humidity    | Number | Humidity    | Yes      |
-+-------------+--------+-------------+----------+
-| Token       | Number | String      | No       |
-+-------------+--------+-------------+----------+
-
-The body should be in JSON format.
 
 Errors
 ======
