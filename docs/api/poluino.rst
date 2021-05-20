@@ -172,6 +172,31 @@ Output
     "admin": 1 or 0
   }
 
+Posting Data to the API
+=======================
+
+POST /data/update
+-----------------
+
+To get user data you need to make a GET call to the following url:
+``https://api.poluino.xyz/data/update``
+
+Body Parameters
+
++-------------+--------+-------------+----------+
+| Field       | Type   | Value       | Optional |
++=============+========+=============+==========+
+| Temperature | Number | Temperature | Yes      |
++-------------+--------+-------------+----------+
+| Pressure    | Number | Pressure    | Yes      |
++-------------+--------+-------------+----------+
+| Humidity    | Number | Humidity    | Yes      |
++-------------+--------+-------------+----------+
+| Token       | Number | String      | No       |
++-------------+--------+-------------+----------+
+
+The body should be in JSON format.
+
 Errors
 ======
 
