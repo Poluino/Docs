@@ -92,6 +92,26 @@ POST /data/update
 To get user data you need to make a GET call to the following url:
 ``https://api.poluino.xyz/data/update``
 
+Headers
+
++-------------+--------+--------------+----------+
+| Field       | Type   | Value        | Optional |
++=============+========+==============+==========+
+| token       | String | Device Token | No       |
++-------------+--------+--------------+----------+
+
+For Windows
+
+.. code-block:: bash
+
+  curl -H "Content-Type: application/json" -H "token: <BOARD TOKEN>" -X POST -d {\"temperature\":30,\"humidity\":78} https://api.poluino.xyz/data/update
+
+For *nix or Mac OSX
+
+.. code-block:: bash
+
+  curl -H "Content-Type: application/json" -H "token: <BOARD TOKEN>" -X POST -d '{"temperature":30,"humidity":78}' https://api.poluino.xyz/data/update
+
 Body Parameters
 
 +-------------+--------+-------------+----------+
@@ -103,8 +123,7 @@ Body Parameters
 +-------------+--------+-------------+----------+
 | Humidity    | Number | Humidity    | Yes      |
 +-------------+--------+-------------+----------+
-| Token       | Number | String      | No       |
-+-------------+--------+-------------+----------+
+
 
 The body should be in JSON format.
 
